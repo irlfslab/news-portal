@@ -3,7 +3,7 @@ const category = document.querySelector(".category");
 const categorySpan = document.querySelectorAll(".category span");
 
 const apiUrl = "https://newsapi.org/v2";
-const apiKey = "xxxxxxxxxxxxxxxxxxxxxxxx";
+const apiKey = "XXXXXXXXXXXXXXXX";
 
 const backupImage = "https://images.unsplash.com/photo-1495020689067-958852a7765e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169";
 
@@ -26,6 +26,7 @@ async function dataRequest(url){
 
 function urlRequest(url){
     dataRequest(url).then(data => {
+        //console.log(data.articles);
         data.articles.forEach(item => {
             cards.innerHTML += `<div class="card">
                                     <div class="image">
@@ -34,7 +35,7 @@ function urlRequest(url){
                                     <div class="info">
                                         <div>
                                             <p class="title">${item.title}</p>
-                                            <p class="desc">${item.desc}</p>
+                                            <<p class="desc">${item.description ? item.description : ""}</p>
                                             <p class="time">
                                                 <span>${item.publishedAt.replace("Z", "").split("T")[1]}</span>
                                                 <span>${item.publishedAt.replace("Z", "").split("T")[0]}</span>
