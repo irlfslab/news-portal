@@ -5,7 +5,7 @@ const categorySpan = document.querySelectorAll(".category span");
 const apiUrl = "https://newsapi.org/v2";
 const apiKey = "XXXXXXXXXXXXXXXX";
 
-const backupImage = "https://images.unsplash.com/photo-1495020689067-958852a7765e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169";
+const altImage = "https://images.unsplash.com/photo-1495020689067-958852a7765e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169";
 
 // const newsA = "https://newsapi.org/v2/top-headlines?country=us&apiKey=XXXXXXXXXXXXXXXX";
 // const newsB = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=XXXXXXXXXXXXXXXX";
@@ -30,7 +30,7 @@ function urlRequest(url){
         data.articles.forEach(item => {
             cards.innerHTML += `<div class="card">
                                     <div class="image">
-                                        <img src="${ item.urlToImage ? item.urlToImage : backupImage }" alt="Default News Image">
+                                        <img src="${ item.urlToImage ? item.urlToImage : altImage }" alt="Default Image">
                                     </div>
                                     <div class="info">
                                         <div>
