@@ -82,7 +82,7 @@
     border-radius: 5px;
 }
 
-.card .info{
+.info{
     flex-grow: 1;
     padding: 10px;
     margin-left: 10px;
@@ -98,30 +98,30 @@
     color: #1A1C20;
 }
 
-.card .desc{
+.desc{
     color: #5D5F63;
     margin: 5px 0px;
 }
 
-.card .time{
+.time{
     color: #5D5F63;
 }
 
-.card .other{
+.other{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.card .source{
+.source{
     background-color: #3279eb;
     color: #FFFFFF;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.card .url{
+.url{
     background-color: #22c589;
     color: #FFFFFF;
     padding: 5px 10px;
@@ -135,7 +135,7 @@
         flex-wrap: wrap;
     }
 
-    .card .info{
+    .info{
         margin-left: 0px;
     }
 }
